@@ -3,7 +3,7 @@
 <meta charset=utf-8>
 <meta http-equiv=x-ua-compatible content="ie=edge">
 <meta name=viewport content="width=device-width,initial-scale=1">
-<title>NODEJSENGIN</title>
+<title>INCIDENT-REPORTING</title>
 <style media=screen>
     /*!* Bootstrap v3.3.7 (http://getbootstrap.com)
 * Copyright 2011-2016 Twitter, Inc.
@@ -8397,7 +8397,7 @@
 <div class=container-fluid>
     <div class=row>
         <div class="col-md-12 collection-intro">
-            <h3>NODEJSENGIN</h3>
+            <h3>INCIDENT-REPORTING</h3>
             <p>
         </div>
         <div class=col-md-12>
@@ -8405,9 +8405,10 @@
                 <ul>
                     <li><strong><a href=#Ungrouped>Ungrouped</a></strong>
                         <ul>
-                            <li><a class=endpoint_menu href=#jump-Ungrouped-CreateReport>Create Report</a>
-                            <li><a class=endpoint_menu href=#jump-Ungrouped-FilterallReports>Filter all Reports</a>
-                            <li><a class=endpoint_menu href=#jump-Ungrouped-GetAllReports>Get All Reports</a>
+                            <li><a class=endpoint_menu href=#jump-Ungrouped-Createreport>Create report</a>
+                            <li><a class=endpoint_menu href=#jump-Ungrouped-FilterIncidents>Filter Incidents</a>
+                            <li><a class=endpoint_menu href=#jump-Ungrouped-Testendpoint>Test end point</a>
+                            <li><a class=endpoint_menu href=#jump-Ungrouped-GetAllIncidents>Get All Incidents</a>
                         </ul>
                 </ul>
             </div>
@@ -8415,58 +8416,115 @@
                 <div class="panel panel-default">
                     <div class=panel-heading>
                         <h3 class=panel-title id=Ungrouped>Ungrouped
-                            <span class=badge>3</span>
+                            <span class=badge>4</span>
                         </h3>
                     </div>
                     <div class=panel-body>
                         <p>
                         <div class=request-item>
                             <div class=panel-group id=accordion-Ungrouped>
-                                <div class="panel panel-success" id=jump-Ungrouped-CreateReport>
-                                    <div class=panel-heading><small class="pull-right text-muted"></small><a
-                                            class=text-success data-toggle=collapse data-parent=#accordion-Ungrouped
-                                            href=#collapse-Ungrouped-CreateReport>
+                                <div class="panel panel-success" id=jump-Ungrouped-Createreport>
+                                    <div class=panel-heading><small class="pull-right text-muted">raw</small>
+                                        <a class=text-success data-toggle=collapse data-parent=#accordion-Ungrouped
+                                            href=#collapse-Ungrouped-Createreport>
                                             <h4 class=panel-title><span
                                                     class="glyphicon glyphicon-plus"></span><strong>Create
-                                                    Report</strong> &nbsp;|&nbsp;
+                                                    report</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-success">POST</strong>
                                                 &nbsp;
-                                                https://enyata-recruitment.onrender.com/incidents
+                                                https://incident-report-hoti.onrender.com/incidents
                                             </h4>
-                                        </a></div>
-                                    <div id=collapse-Ungrouped-CreateReport class="panel-collapse collapse">
-                                        <div class=panel-body></div>
+                                        </a>
+                                    </div>
+                                    <div id=collapse-Ungrouped-Createreport class="panel-collapse collapse">
+                                        <div class=panel-body>
+                                            <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+                                                &#34;client_id&#34;: &#34;3&#34;,
+                                                &#34;incident_desc&#34;: &#34;third desc&#34;,
+                                                &#34;city&#34;: &#34;Madrid&#34;,
+                                                &#34;country&#34;: &#34;Spain&#34;
+                                                }</span>
+                                            <div class=clearfix></div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="panel panel-info" id=jump-Ungrouped-FilterallReports>
+                                <div class="panel panel-info" id=jump-Ungrouped-FilterIncidents>
                                     <div class=panel-heading><small class="pull-right text-muted"></small><a
                                             class=text-info data-toggle=collapse data-parent=#accordion-Ungrouped
-                                            href=#collapse-Ungrouped-FilterallReports>
+                                            href=#collapse-Ungrouped-FilterIncidents>
                                             <h4 class=panel-title><span
-                                                    class="glyphicon glyphicon-plus"></span><strong>Filter all
-                                                    Reports</strong> &nbsp;|&nbsp;
+                                                    class="glyphicon glyphicon-plus"></span><strong>Filter
+                                                    Incidents</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://enyata-recruitment.onrender.com/incidents
+                                                https://incident-report-hoti.onrender.com/incidents/filter
                                             </h4>
                                         </a></div>
-                                    <div id=collapse-Ungrouped-FilterallReports class="panel-collapse collapse">
-                                        <div class=panel-body></div>
+                                    <div id=collapse-Ungrouped-FilterIncidents class="panel-collapse collapse">
+                                        <div class=panel-body>
+                                            <h5 class="label label-info">Query</h5>
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Key
+                                                        <th>Value
+                                                        <th>Description
+                                                <tbody>
+                                                    <tr>
+                                                        <td>country
+                                                        <td>Spain
+                                                        <td>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="panel panel-info" id=jump-Ungrouped-GetAllReports>
+                                <div class="panel panel-info" id=jump-Ungrouped-Testendpoint>
                                     <div class=panel-heading><small class="pull-right text-muted"></small><a
                                             class=text-info data-toggle=collapse data-parent=#accordion-Ungrouped
-                                            href=#collapse-Ungrouped-GetAllReports>
+                                            href=#collapse-Ungrouped-Testendpoint>
+                                            <h4 class=panel-title><span
+                                                    class="glyphicon glyphicon-plus"></span><strong>Test end
+                                                    point</strong> &nbsp;|&nbsp;
+                                                <strong class="request-method border-info">GET</strong>
+                                                &nbsp;
+                                                https://api.openweathermap.org/data/2.5/weather
+                                            </h4>
+                                        </a></div>
+                                    <div id=collapse-Ungrouped-Testendpoint class="panel-collapse collapse">
+                                        <div class=panel-body>
+                                            <h5 class="label label-info">Query</h5>
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Key
+                                                        <th>Value
+                                                        <th>Description
+                                                <tbody>
+                                                    <tr>
+                                                        <td>q
+                                                        <td>Argentina
+                                                        <td>
+                                                    <tr>
+                                                        <td>appid
+                                                        <td>772210fca9058b9e3033542aebffef86
+                                                        <td>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-info" id=jump-Ungrouped-GetAllIncidents>
+                                    <div class=panel-heading><small class="pull-right text-muted"></small><a
+                                            class=text-info data-toggle=collapse data-parent=#accordion-Ungrouped
+                                            href=#collapse-Ungrouped-GetAllIncidents>
                                             <h4 class=panel-title><span
                                                     class="glyphicon glyphicon-plus"></span><strong>Get All
-                                                    Reports</strong> &nbsp;|&nbsp;
+                                                    Incidents</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://enyata-recruitment.onrender.com/incidents
+                                                https://incident-report-hoti.onrender.com/incidents
                                             </h4>
                                         </a></div>
-                                    <div id=collapse-Ungrouped-GetAllReports class="panel-collapse collapse">
+                                    <div id=collapse-Ungrouped-GetAllIncidents class="panel-collapse collapse">
                                         <div class=panel-body></div>
                                     </div>
                                 </div>
@@ -8490,7 +8548,7 @@
                             <tbody>
                                 <tr>
                                     <td>URL
-                                    <td>https://enyata-recruitment.onrender.com/
+                                    <td>http://localhost:5000/api/v1
                                     <td>
                         </table>
                         <div class=clearfix></div>
@@ -8499,13 +8557,15 @@
             </div>
         </div>
     </div>
-    <script src="./browser-app.js"></script>
+    <script src="browser-app.js">
+
+    </script>
     <br><br>
     <footer class="navbar-default navbar-fixed-bottom">
         <div class=container-fluid>
             <div class="span12 text-center"><span data-toggle=tooltip
                     title="If the application help you, please feel free to give a star to the project in github. Your star inspire me to work more on open-source projects like this!">Generated
-                    at 2024-03-26 15:43:46 by <a href=https://github.com/thedevsaddam/docgen target=_blank
+                    at 2024-08-10 22:04:05 by <a href=https://github.com/thedevsaddam/docgen target=_blank
                         class=text-muted>docgen</a></span></div>
         </div>
     </footer>
